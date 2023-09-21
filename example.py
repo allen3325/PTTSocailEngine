@@ -8,14 +8,14 @@ import re
 from NCHU_nlptoolkit.cut import *
 import time
 
-# Just For Test A
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 search_keyword = '林書豪'
-K = 45
+K = 100
 current_directory = os.getcwd()
 
 #TODO 解決 Maximum length 問題，以及目前文字雲太少。
+#TODO 字型問題
 
 def generate_wordcloud(group_names: list):
     print("=============== Generate Wordcloud ===============")
@@ -34,7 +34,7 @@ def generate_wordcloud(group_names: list):
                 tmpdict[word] = int(freq)
                 
         # generate wordcloud
-        cloud = WordCloud(background_color="white", font_path="{current_directory}/fonts/POP.ttf", width=700, height = 350).generate_from_frequencies(tmpdict)
+        cloud = WordCloud(background_color="white", font_path=f"{current_directory}/fonts/POP.ttf", width=700, height = 350).generate_from_frequencies(tmpdict)
         cloud.to_file(f'{current_directory}/result/{search_keyword}-{group_names[i]}.png')
 
 def search_by_keyword(keyword: str) -> list:
@@ -53,7 +53,7 @@ def search_by_keyword(keyword: str) -> list:
     return title_and_description
 
 def generate_prompt(table: dict) -> str:
-    prompt =  """以下文字的格式為 詞彙:詞頻 。幫我根據這些詞彙分成三個類別分群，每個類別給我5~15個詞彙，並且每個詞彙都要記錄對應的詞頻。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙:詞頻\n文字為以下\n###\n
+    prompt =  """以下文字的格式為 詞彙:詞頻 。幫我根據這些詞彙分成三個類別分群，每個類別給我25~35個詞彙，並且每個詞彙都要記錄對應的詞頻。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙:詞頻\n文字為以下\n###\n
     """
     for word, freq in table.items():
         prompt += (word + ":" + str(freq) + "\n")
@@ -91,18 +91,22 @@ def save_result(text) -> list:
 
     # split the group
     all_group = re.split(r'\d-\w+', text)
-
     # split word, frequency in group and append to the list
     for group in all_group:
+        group = group.strip()
         group_data = ""
-        for word in group.split("\n"):
-            if word.find(":") != -1 and word != "":
-                term, frequency = word.split(":")
-                frequency = int(frequency)
-                group_data += f'{frequency}:{term.strip()}\n'
-                
-        if group_data != "":
-            group_data_list.append(group_data)
+        # delete empty string
+        if len(group) > 1:
+            for word in group.split("\n"):
+                # prevent dirty data like only ":"
+                if len(word) > 1:
+                    if word.find(":") != -1 and word != "":
+                        term, frequency = word.split(":")
+                        frequency = int(frequency)
+                        group_data += f'{frequency}:{term.strip()}\n'
+                    
+            if group_data != "":
+                group_data_list.append(group_data)
 
     # save group list into file
     with open(f'{current_directory}/result/{search_keyword}-{group_name_list[0]}.txt','w') as f:
