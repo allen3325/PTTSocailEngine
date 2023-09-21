@@ -2,18 +2,20 @@
 ---
 ## 文字雲範例：
 example.py(一樣要先設定好OpenAI API KEY)
+```bash
+python example.py
+```
 ---
 ## 啟動程式
-1. 將OpenAI API KEY 放進 .env.example
+1. 將 .env.example 複製一份，並改名成 .env，將以下內容填入
 ``` bash
 OPENAI_API_KEY = 你的API KEY
 ```
-2. 將.env.example 改名成 .env
-3. 跑以下指令
+2. 跑以下指令
 ``` bash
 pip install -r requirements.txt
 ```
-4. 使用 uvicorn 啟動 fastAPI
+3. 使用 uvicorn 啟動 fastAPI
 
 ---
 # 其他
