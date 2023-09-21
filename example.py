@@ -8,7 +8,7 @@ import re
 from NCHU_nlptoolkit.cut import *
 import time
 
-# Just For Test
+# Just For Test A
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 search_keyword = '林書豪'
