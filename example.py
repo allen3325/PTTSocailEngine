@@ -17,6 +17,16 @@ current_directory = os.getcwd()
 #TODO 解決 Maximum length 問題，以及目前文字雲太少。
 #TODO 字型問題
 
+def checkFolder():
+    # 檢查 result 資料夾是否存在
+    result_folder = 'result'
+    if not os.path.exists(result_folder):
+    # 如果不存在，則創建資料夾
+        os.makedirs(result_folder)
+        print(f'已創建 {result_folder} 資料夾')
+    else:
+        print(f'{result_folder} 資料夾已存在')
+
 def generate_wordcloud(group_names: list):
     print("=============== Generate Wordcloud ===============")
     global search_keyword
@@ -131,6 +141,7 @@ def get_top_K(frequency_counting_table, K) -> dict:
         return dict(sorted(frequency_counting_table.items(), key=lambda x:x[1], reverse = 1)[0:K])
 
 if __name__ == '__main__':
+    checkFolder()
     # generate list about search_keyword
     title_and_description = search_by_keyword(search_keyword)
     # make frequency table about K
