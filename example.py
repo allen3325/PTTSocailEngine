@@ -10,7 +10,7 @@ import time
 
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
-search_keyword = '林書豪'
+search_keyword = '孫易磊'
 K = 100
 current_directory = os.getcwd()
 
