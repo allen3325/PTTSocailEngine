@@ -10,7 +10,7 @@ import time
 
 
 # TODO Change Yahoo to PTT
-# TODO chatGPT_classification_words 不擺詞頻
+# TODO 字型問題
 
 class Word_Cloud:
     def __init__(self) -> None:
@@ -65,10 +65,11 @@ class Word_Cloud:
         return title_and_description
 
     def generate_prompt(self, table: dict) -> str:
-        prompt = """以下文字的格式為 詞彙:詞頻 。幫我根據這些詞彙分成三個類別分群，每個類別給我25~35個詞彙，並且每個詞彙都要記錄對應的詞頻。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙:詞頻\n文字為以下\n###\n
+        prompt = """以下文字的格式為 詞彙 。幫我根據這些詞彙分成三個類別分群，每個類別給我25~35個詞彙。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙\n文字為以下\n###\n
         """
         for word, freq in table.items():
-            prompt += (word + ":" + str(freq) + "\n")
+            # prompt += (word + ":" + str(freq) + "\n")
+            prompt += (word + "\n")
         prompt += "###"
         return prompt
 
@@ -84,13 +85,12 @@ class Word_Cloud:
                     # frequency_penalty=0,
                     # presence_penalty=0
                 )
-                # print(f"prompt is \n{generate_prompt(table=table)}")
                 return response['choices'][0]['message']['content']
             except:
                 time.sleep(3)
                 print("some error sleep 3 seconds.")
 
-    def save_result(self, search_keyword, text) -> list:
+    def save_result(self,top_K , search_keyword, text) -> list:
         print("=============== Save chatGPT response to list ===============")
         group_name_list = []
         group_data_list = []
@@ -98,7 +98,6 @@ class Word_Cloud:
         group_name_list.append(groups[0].split('-')[1])
         group_name_list.append(groups[1].split('-')[1])
         group_name_list.append(groups[2].split('-')[1])
-
         # split the group
         all_group = re.split(r'\d-\w+', text)
         # split word, frequency in group and append to the list
@@ -108,12 +107,9 @@ class Word_Cloud:
             # delete empty string
             if len(group) > 1:
                 for word in group.split("\n"):
-                    # prevent dirty data like only ":"
-                    if len(word) > 1:
-                        if word.find(":") != -1 and word != "":
-                            term, frequency = word.split(":")
-                            frequency = int(frequency)
-                            group_data += f'{frequency}:{term.strip()}\n'
+                    if word != "":
+                        frequency = int(top_K[word])
+                        group_data += f'{frequency}:{word.strip()}\n'
 
                 if group_data != "":
                     group_data_list.append(group_data)
@@ -149,7 +145,7 @@ class Word_Cloud:
         # Call chatGPT and save response
         res = self.chatGPT_classification_words(top_K)
         self.save_response(search_keyword, res)
-        group_name_list = self.save_result(search_keyword, res)
+        group_name_list = self.save_result(top_K, search_keyword, res)
         # generate wordcloud
         self.generate_picture(search_keyword, group_name_list)
         return "Done."
