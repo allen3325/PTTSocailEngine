@@ -9,7 +9,6 @@ from NCHU_nlptoolkit.cut import *
 import time
 
 
-# FIXME call chatGPT has problem
 # TODO Change Yahoo to PTT
 # TODO chatGPT_classification_words 不擺詞頻
 
