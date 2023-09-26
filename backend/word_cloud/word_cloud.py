@@ -1,4 +1,3 @@
-from GoogleNews import GoogleNews
 from wordcloud import WordCloud
 from collections import Counter
 import openai
@@ -7,9 +6,10 @@ from dotenv import load_dotenv
 import re
 from NCHU_nlptoolkit.cut import *
 import time
+import requests
+from datetime import datetime, timedelta
 
-
-# TODO Change Yahoo to PTT
+# TODO Change Yahoo to PTT(參數調整完畢，切字(文章主題，標題，內文)完成，加入Counter中)
 # TODO 字型問題
 
 class Word_Cloud:
@@ -30,7 +30,6 @@ class Word_Cloud:
 
     def generate_picture(self, search_keyword, group_names: list):
         print("=============== Generate Wordcloud ===============")
-        table = []
         tmpdict = {}
         for i in [0, 1, 2]:
             tmpdict.clear()
@@ -48,21 +47,49 @@ class Word_Cloud:
                               height=350).generate_from_frequencies(tmpdict)
             cloud.to_file(f'{self.current_directory}/result/{search_keyword}-{group_names[i]}.png')
 
-    def search_by_keyword(self, keyword: str) -> list:
-        # search from google news
-        GoogleNews().clear()
-        googlenews = GoogleNews(lang='zh-TW', encode='utf-8')
-        googlenews.search(keyword)
-
-        # extract title and description to list
-        title_and_description = []
-        for page in range(1, 11):
-            result_list = googlenews.page_at(page)
-            for result in result_list:
-                title_and_description += cut_sentence(result['desc'], minword=2) + cut_sentence(result['title'],
-                                                                                                minword=2)
-
-        return title_and_description
+    def search_by_keyword(self, keyword: str, size: int = 100, page_from: int = 0, start: int = 0, end: int = 0) -> list:
+        if start == 0 or end == 0:
+            # 取得今天凌晨12點的時間
+            today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
+            today_timestamp = int(today.timestamp())
+            # 取得昨天凌晨12點的時間
+            yesterday = today - timedelta(days=1)
+            yesterday_timestamp = int(yesterday.timestamp())
+            start = yesterday_timestamp
+            end = today_timestamp
+            # print(f"今天凌晨12點的timestamp: {today_timestamp}")
+            # print(f"昨天凌晨12點的timestamp: {yesterday_timestamp}")
+        r = requests.get(f'http://ptt-search.nlpnchu.org/api/GetByContent?size={size}&from={page_from}&start={start}&end={end}&content={keyword}', headers={'Accept': 'application/json'})
+        res = r.json()
+        title_and_description_ptt = []
+        record_title = [] # record article title to avoid same title duplicate record in result
+        for result in res['hits']:
+            # cleaning text
+            text = result['_source']['article_title'].strip()
+            content = result['_source']['content'].replace("\n"," ").strip()
+            text = text.replace('\u3000', ' ') # \u3000是全形空白
+            content = content.replace('\u3000', ' ')
+            # 尋找 [任意字元] 對主題以及標題作切割
+            match = re.search(r'\[(.+?)\]', text)
+            if match:
+                article_theme = match.group(1)  # 取得問卦，ie, []裡的內容
+                # print(f'article_theme is {article_theme}')
+                result = re.sub(r'\[.+?\]', '', text)  # 刪除 [問卦] 及其中的文字
+                article_title = result.strip()
+                # print(f"article_title is {article_title}")
+                # check duplicate article_title
+                if article_title not in record_title:
+                    # print(article_title + " is not in list, append.")
+                    record_title.append(article_title)
+                    # print(f"After append. {record_title}")
+                    title_and_description_ptt += cut_sentence(article_title, minword=2) + cut_sentence(content, minword=2)
+                else:
+                    # print(f"article_title {article_title} 重複")
+                    title_and_description_ptt += cut_sentence(content, minword=2)
+            else:
+                print(text + content + ' not match')
+                
+        return title_and_description_ptt
 
     def generate_prompt(self, table: dict) -> str:
         prompt = """以下文字的格式為 詞彙 。幫我根據這些詞彙分成三個類別分群，每個類別給我25~35個詞彙。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙\n文字為以下\n###\n
@@ -108,6 +135,9 @@ class Word_Cloud:
             if len(group) > 1:
                 for word in group.split("\n"):
                     if word != "":
+                        # FIXME frequency = int(top_K[word])
+                        #                     ~~~~~^^^^^^
+                        # KeyError: 'NBA'
                         frequency = int(top_K[word])
                         group_data += f'{frequency}:{word.strip()}\n'
 
@@ -151,4 +181,6 @@ class Word_Cloud:
         return "Done."
 
     def test(self):
+        print(f"{self.current_directory}/fonts/POP.ttf")
+        print("/home/allen/project/pttSocial/PTTSocailEngine/backend/fonts/POP.ttf")
         return "Test"
