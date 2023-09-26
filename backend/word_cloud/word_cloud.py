@@ -9,7 +9,7 @@ import time
 import requests
 from datetime import datetime, timedelta
 
-# TODO Change Yahoo to PTT(參數調整完畢，切字(文章主題，標題，內文)完成，加入Counter中)
+# TODO 檢查過多詞彙，GPT會亂給會壞掉的問題。(需要分三類，先檢查它回傳有幾類)
 # TODO 字型問題
 
 class Word_Cloud:
@@ -134,7 +134,9 @@ class Word_Cloud:
             # delete empty string
             if len(group) > 1:
                 for word in group.split("\n"):
-                    if word != "":
+                    if top_K[word] is None:
+                        print(f"top_K[{word}] is None")
+                    if word != "" and top_K[word] != None:
                         # FIXME frequency = int(top_K[word])
                         #                     ~~~~~^^^^^^
                         # KeyError: 'NBA'
@@ -166,9 +168,10 @@ class Word_Cloud:
             return dict(sorted(frequency_counting_table.items(), key=lambda x: x[1], reverse=1)[0:K])
 
     def generate_word_cloud(self, search_keyword, K):
+        size = 1000
         self.check_folder()
         # generate list about search_keyword
-        title_and_description = self.search_by_keyword(search_keyword)
+        title_and_description = self.search_by_keyword(search_keyword, size)
         # make frequency table about K
         frequency_counting_table = dict(Counter(title_and_description))
         top_K = self.get_top_K(frequency_counting_table, K)
