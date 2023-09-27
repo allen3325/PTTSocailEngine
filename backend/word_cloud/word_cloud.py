@@ -168,7 +168,7 @@ class Word_Cloud:
             return dict(sorted(frequency_counting_table.items(), key=lambda x: x[1], reverse=1)[0:K])
 
     def generate_word_cloud(self, search_keyword, K):
-        size = 1000
+        size = 100
         self.check_folder()
         # generate list about search_keyword
         title_and_description = self.search_by_keyword(search_keyword, size)
