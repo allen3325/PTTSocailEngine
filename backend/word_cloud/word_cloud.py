@@ -185,7 +185,7 @@ class Word_Cloud:
         frequency_counting_table = dict(Counter(title_and_description))
         top_K = self.get_top_K(frequency_counting_table, K)
         # Call chatGPT and save response
-        res = self.chatGPT_classification_words(top_K)
+        res = self.chatGPT_clustering_words(top_K)
         self.save_response(search_keyword, res)
         group_name_list = self.save_result(top_K, search_keyword, res)
         # generate wordcloud
