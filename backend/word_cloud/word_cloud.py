@@ -59,6 +59,7 @@ class Word_Cloud:
             end = today_timestamp
             # print(f"今天凌晨12點的timestamp: {today_timestamp}")
             # print(f"昨天凌晨12點的timestamp: {yesterday_timestamp}")
+        print(f'http://ptt-search.nlpnchu.org/api/GetByContent?size={size}&from={page_from}&start={start}&end={end}&content={keyword}')
         r = requests.get(f'http://ptt-search.nlpnchu.org/api/GetByContent?size={size}&from={page_from}&start={start}&end={end}&content={keyword}', headers={'Accept': 'application/json'})
         res = r.json()
         title_and_description_ptt = []
@@ -94,30 +95,39 @@ class Word_Cloud:
     def generate_prompt(self, table: dict) -> str:
         # prompt = """以下文字的格式為 詞彙 。幫我根據這些詞彙分成三個分群，每個類別給我25~35個詞彙。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙\n文字為以下\n###\n
         # """
-        prompt = """請幫我將以下的詞彙分成三群，並針對每一群的主題進行說明。\n輸出格式為：\n數字-此群的主題說明文字\n詞彙\n文字為以下"""
+        prompt = """請幫我將以下的詞彙分成三群，並針對每一群的主題進行說明。\n輸出格式為：\n數字-此群的主題說明文字:\n結果:<此群的詞彙用,隔開>\n主題說明:\n###\n{"""
         for word, freq in table.items():
             # prompt += (word + ":" + str(freq) + "\n")
             prompt += (word + "\n")
-        prompt += "###"
+        prompt += "}###"
         return prompt
 
-    # TODO Rename Clustering
-    def chatGPT_classification_words(self, table: dict):
-        while True:
-            # Avoid http 502 error
-            try:
-                print("=============== Call ChatGPT ===============")
-                response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo-16k-0613",
-                    messages=[{"role": "user", "content": self.generate_prompt(table)}],
-                    temperature=0
-                    # frequency_penalty=0,
-                    # presence_penalty=0
-                )
-                return response['choices'][0]['message']['content']
-            except:
-                time.sleep(3)
-                print("some error sleep 3 seconds.")
+    def chatGPT_clustering_words(self, table: dict):
+        # while True:
+        #     # Avoid http 502 error
+        #     try:
+        #         print("=============== Call ChatGPT ===============")
+        #         response = openai.ChatCompletion.create(
+        #             model="gpt-3.5-turbo-16k-0613",
+        #             messages=[{"role": "user", "content": self.generate_prompt(table)}],
+        #             temperature=0
+        #             # frequency_penalty=0,
+        #             # presence_penalty=0
+        #         )
+        #         return response['choices'][0]['message']['content']
+        #     except:
+        #         time.sleep(3)
+        #         print("some error sleep 3 seconds.")
+
+        print("=============== Call ChatGPT ===============")
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo-16k-0613",
+            messages=[{"role": "user", "content": self.generate_prompt(table)}],
+            temperature=0
+            # frequency_penalty=0,
+            # presence_penalty=0
+        )
+        return response['choices'][0]['message']['content']
 
     def save_result(self,top_K , search_keyword, text) -> list:
         print("=============== Save chatGPT response to list ===============")
@@ -136,14 +146,11 @@ class Word_Cloud:
             # delete empty string
             if len(group) > 1:
                 for word in group.split("\n"):
-                    if top_K[word] is None:
-                        print(f"top_K[{word}] is None")
-                    if word != "" and top_K[word] != None:
-                        # FIXME frequency = int(top_K[word])
-                        #                     ~~~~~^^^^^^
-                        # KeyError: 'NBA'
+                    if word in top_K:
                         frequency = int(top_K[word])
                         group_data += f'{frequency}:{word.strip()}\n'
+                    else:
+                        print(f"top_K[{word}] is None")
 
                 if group_data != "":
                     group_data_list.append(group_data)
@@ -187,5 +194,5 @@ class Word_Cloud:
 
     def test(self):
         print(f"{self.current_directory}/fonts/POP.ttf")
-        print("/home/allen/project/pttSocial/PTTSocailEngine/backend/fonts/POP.ttf")
+        print("/user_data/project/PTTSocailEngine/backend/fonts/POP.ttf")
         return "Test"
