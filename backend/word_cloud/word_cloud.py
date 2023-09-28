@@ -92,14 +92,16 @@ class Word_Cloud:
         return title_and_description_ptt
 
     def generate_prompt(self, table: dict) -> str:
-        prompt = """以下文字的格式為 詞彙 。幫我根據這些詞彙分成三個類別分群，每個類別給我25~35個詞彙。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙\n文字為以下\n###\n
-        """
+        # prompt = """以下文字的格式為 詞彙 。幫我根據這些詞彙分成三個分群，每個類別給我25~35個詞彙。\n輸出格式為：\n數字-此類別所代表的主題\n詞彙\n文字為以下\n###\n
+        # """
+        prompt = """請幫我將以下的詞彙分成三群，並針對每一群的主題進行說明。\n輸出格式為：\n數字-此群的主題說明文字\n詞彙\n文字為以下"""
         for word, freq in table.items():
             # prompt += (word + ":" + str(freq) + "\n")
             prompt += (word + "\n")
         prompt += "###"
         return prompt
 
+    # TODO Rename Clustering
     def chatGPT_classification_words(self, table: dict):
         while True:
             # Avoid http 502 error

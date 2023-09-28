@@ -5,12 +5,12 @@ from word_cloud import Word_Cloud
 app = FastAPI()
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello Test"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Hello Test"}
 
 @app.get("/test")
-async def test():
+async def test_font_path():
     wc = Word_Cloud()
     return wc.test()
 
