@@ -14,7 +14,6 @@ dateparser==1.1.8
 fastapi==0.103.1
 fonttools==4.42.1
 frozenlist==1.4.0
-GoogleNews==1.6.10
 h11==0.14.0
 idna==3.4
 jieba==0.42.1
