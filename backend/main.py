@@ -2,8 +2,11 @@ from fastapi import FastAPI
 import sys
 sys.path.append('word_cloud')
 from word_cloud import Word_Cloud
+sys.path.append('word_fetcher')
+from word_fetcher import Word_Fetcher
 sys.path.append('comment_fetcher')
 from comment_fetcher import Comment_Fetcher
+
 app = FastAPI()
 
 
@@ -23,7 +26,15 @@ async def generate_word_cloud(search_keyword, K: int = 100):
     wc = Word_Cloud()
     return wc.generate_word_cloud(search_keyword, K)
 
+
+@app.get("/word_fetcher/{search_keyword}")
+async def generate_dictionary(search_keyword, K: int = 100):
+    print(f"search_keyword is {search_keyword}.")
+    wf = Word_Fetcher()
+    return wf.generate_dictionary(search_keyword, K)
+
 @app.get("/getcomment/{article_id}")
 async def get_comment_list(article_id: str, start: int = None, end: int = None):
     cf = Comment_Fetcher()
     return cf.get_comment_list(article_id, start, end)
+

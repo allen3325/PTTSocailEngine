@@ -1,4 +1,3 @@
-from wordcloud import WordCloud
 from collections import Counter
 import openai
 import os
@@ -7,9 +6,10 @@ import re
 from NCHU_nlptoolkit.cut import *
 import requests
 from datetime import datetime, timedelta
+import json
 
 
-class Word_Cloud:
+class Word_Fetcher:
     def __init__(self) -> None:
         load_dotenv()
         openai.api_key = os.getenv('OPENAI_API_KEY')
@@ -24,25 +24,6 @@ class Word_Cloud:
             print(f'已創建 {result_folder} 資料夾')
         else:
             print(f'{result_folder} 資料夾已存在')
-
-    def generate_picture(self, search_keyword, group_names: list):
-        print("=============== Generate Wordcloud ===============")
-        tmpdict = {}
-        for i in [0, 1, 2]:
-            tmpdict.clear()
-            with open(f"{self.current_directory}/result/{search_keyword}-{group_names[i]}.txt") as f:
-                data_list = f.readlines()
-            f.close()
-            for data in data_list:
-                word = data.split(':')[1].strip()
-                freq = data.split(':')[0].strip()
-                if word != "" and freq != ":":
-                    tmpdict[word] = int(freq)
-
-            # generate wordcloud
-            cloud = WordCloud(background_color="white", font_path=f"{self.current_directory}/fonts/POP.ttf", width=700,
-                              height=350).generate_from_frequencies(tmpdict)
-            cloud.to_file(f'{self.current_directory}/result/{search_keyword}-{group_names[i]}.png')
 
     def search_by_keyword(self, keyword: str, size: int = 100, page_from: int = 0, start: int = 0, end: int = 0) -> list:
         if start == 0 or end == 0:
@@ -104,42 +85,6 @@ class Word_Cloud:
         )
         return response['choices'][0]['message']['content']
 
-    def save_result(self,top_K , search_keyword, text) -> list:
-        print("=============== Save chatGPT response to list ===============")
-        group_name_list = []
-        group_data_list = []
-        groups = re.findall(r'\d-\w+', text)
-        group_name_list.append(groups[0].split('-')[1])
-        group_name_list.append(groups[1].split('-')[1])
-        group_name_list.append(groups[2].split('-')[1])
-        # split the group
-        all_group = re.split(r'\d-\w+', text)
-        # split word, frequency in group and append to the list
-        for group in all_group:
-            group = group.strip()
-            group_data = ""
-            # delete empty string
-            if len(group) > 1:
-                for word in group.split("\n"):
-                    if word in top_K:
-                        frequency = int(top_K[word])
-                        group_data += f'{frequency}:{word.strip()}\n'
-                    else:
-                        print(f"top_K[{word}] is None")
-
-                if group_data != "":
-                    group_data_list.append(group_data)
-
-        # save group list into file
-        with open(f'{self.current_directory}/result/{search_keyword}-{group_name_list[0]}.txt', 'w') as f:
-            f.write(f'{group_data_list[0]}')
-        with open(f'{self.current_directory}/result/{search_keyword}-{group_name_list[1]}.txt', 'w') as f:
-            f.write(f'{group_data_list[1]}')
-        with open(f'{self.current_directory}/result/{search_keyword}-{group_name_list[2]}.txt', 'w') as f:
-            f.write(f'{group_data_list[2]}')
-
-        return group_name_list
-
     def save_response(self, search_keyword, text):
         print("=============== Save chatGPT response ===============")
         with open(f'{self.current_directory}/result/{search_keyword}.txt', 'w') as f:
@@ -151,7 +96,52 @@ class Word_Cloud:
         else:
             return dict(sorted(frequency_counting_table.items(), key=lambda x: x[1], reverse=1)[0:K])
 
-    def generate_word_cloud(self, search_keyword, K):
+    def generate_dictionary_response(self, keyword, text) -> dict:
+        print("=============== Generate Dictionary ===============")
+        group_name_list = []
+        groups = re.findall(r'\d-\w+', text)
+        group_name_list.append(groups[0].split('-')[1])
+        group_name_list.append(groups[1].split('-')[1])
+        group_name_list.append(groups[2].split('-')[1])
+
+        print(f"group_name_list is {group_name_list}")
+
+        sections = re.split(r'\n\d-', text.strip())
+
+        result_dict = {}
+        i=0
+        for section in sections[0:]:
+            lines = section.strip().split('\n')
+            content = lines[1].split(':')[1].strip()
+            result_dict[group_name_list[i]] = {
+                "主題說明": content,
+                "結果": lines[2].split(':')[1].strip()
+            }
+            i+=1
+
+        with open(f'{self.current_directory}/result/{keyword}.json', "w") as outfile:
+            outfile.write(json.dumps(result_dict, indent=4, ensure_ascii=False))
+        return result_dict
+    
+
+    """
+    generate dictionary which format is 
+    {
+        "林書豪相關": {
+            "主題說明": "林書豪是台灣籃球界的代表性人物，他的表現和成就引起了大家的關注和討論。",
+            "結果": "林書豪, 台灣, 喜歡, 李雲翔, 本屆, 問題, 打球, 球季, 國家隊, 參賽, 中華隊, 一名, 中華籃協, 出賽, 當時, 工作, 新人, 面試, 公司, 興趣, 你很好, 轉一圈, 之後, 回來, 提到, 一定, 可帶, 知情, 沒給, 籃協, 中華奧會, 回覆, 不敵, 球迷, 質疑, 派出, 對此, 球員, 能夠, 透過, 輸給, 新世界, 排名, 公布, 位居, 第五, 樓下, 銅牌戰, 中國, 贏的, 機率, 冒出, 撥接, 林來瘋, 時期, 連勝, 場的, 對手, 都不, Nba, 討論, 且還, 全球華人, 籃球, 方面, 影響, 正面, 當年, 還在, 的時候, 說過, 大家都, 努力, 訓練, 體育館, 看見, 人有, 嚴重, 種族偏見"
+        },
+        "亞運相關": {
+            "主題說明": "亞洲運動會（簡稱亞運）是亞洲最大的綜合性運動會，各國運動員在此競技，代表國家爭取榮譽。",
+            "結果": "歸化, 亞運, 台灣, 阿提諾, 約旦, 國家, 奧會, 杭州亞運, Wbsc"
+        },
+        "籃球相關": {
+            "主題說明": "籃球是一項全球性的運動，對於球迷和球員來說都有著重要的意義和影響。",
+            "結果": "洋將, Kobe, 金身, 比較, Lb, 喬丹, Xd, ddd, 梗圖, 看見, 種族偏見"
+        }
+    }
+    """
+    def generate_dictionary(self, search_keyword, K):
         size = 100
         self.check_folder()
         # generate list about search_keyword
@@ -162,12 +152,6 @@ class Word_Cloud:
         # Call chatGPT and save response
         res = self.chatGPT_clustering_words(top_K)
         self.save_response(search_keyword, res)
-        group_name_list = self.save_result(top_K, search_keyword, res)
-        # generate wordcloud
-        self.generate_picture(search_keyword, group_name_list)
-        return "Done."
-
-    def test(self):
-        print(f"{self.current_directory}/fonts/POP.ttf")
-        print("/user_data/project/PTTSocailEngine/backend/fonts/POP.ttf")
-        return "Test"
+        # generate result json requirement's dictionary 
+        dict_res = self.generate_dictionary_response(search_keyword, res)
+        return dict_res
