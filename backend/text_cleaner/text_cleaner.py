@@ -22,7 +22,9 @@ class Text_Cleaner:
         with open(file_path, 'r', encoding='utf-8') as file:
             stop_words = set(word.strip() for word in file)
         return stop_words
-        
+    def clean_URL(self,input_text : str):
+        String_without_URL = re.sub(self.url_pattern, '', input_text)
+        return String_without_URL   
     def clean_text(self, input_text : str):
         print("------processing input article------")
         
@@ -30,7 +32,8 @@ class Text_Cleaner:
         cleaned_text = re.sub(rf'(\d?\.?)((備註)|(--\n)).*','',input_text,flags=re.DOTALL)
         
         #刪除url
-        cleaned_text = re.sub(self.url_pattern, '', cleaned_text) 
+        #cleaned_text = re.sub(self.url_pattern, '', cleaned_text) 
+        cleaned_text = self.clean_URL(cleaned_text)
         
         #刪除八卦新聞格式 -> (1.)(媒體來源)(:)
         gossiping_uniform='|'.join(re.escape(word) for word in self.uniform)
