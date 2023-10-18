@@ -1,11 +1,5 @@
 # PTTSocailEngine
 ---
-## 文字雲範例：
-example.py(一樣要先設定好OpenAI API KEY)
-```bash
-python example.py
-```
----
 ## 啟動程式
 1. 將 .env.example 複製一份，並改名成 .env，將以下內容填入
 ``` bash
