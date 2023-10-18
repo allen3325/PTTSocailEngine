@@ -24,6 +24,6 @@ async def generate_word_cloud(search_keyword, K: int = 100):
     return wc.generate_word_cloud(search_keyword, K)
 
 @app.get("/getcomment/{article_id}")
-async def generate_word_cloud(article_id: str, start: int = None, end: int = None):
+async def get_comment_list(article_id: str, start: int = None, end: int = None):
     cf = Comment_Fetcher()
     return cf.get_comment_list(article_id, start, end)
