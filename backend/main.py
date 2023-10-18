@@ -1,11 +1,7 @@
 from fastapi import FastAPI
-import sys
-sys.path.append('word_cloud')
-from word_cloud import Word_Cloud
-sys.path.append('word_fetcher')
-from word_fetcher import Word_Fetcher
-sys.path.append('comment_fetcher')
-from comment_fetcher import Comment_Fetcher
+from word_cloud.word_cloud import Word_Cloud
+from word_fetcher.word_fetcher import Word_Fetcher
+from comment_fetcher.comment_fetcher import Comment_Fetcher
 
 app = FastAPI()
 
