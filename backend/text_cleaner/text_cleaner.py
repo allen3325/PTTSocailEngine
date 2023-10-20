@@ -2,7 +2,7 @@ import re
 class Text_Cleaner:
     def __init__(self):
         # loading 過濾詞表 stop_words.txt
-        self.stop_words = self.load_stop_words('./stop_words.txt')
+        self.stop_words = self.load_stop_words('./text_cleaner/stop_words.txt')
         #self.stop_words=['媒體','中央社','中時','民視','三立','自由時報','科技新報','記者','編輯','報導','新聞','來源','即時中心','示意圖']
         
         # url regular expression
