@@ -18,3 +18,6 @@ __pycache__/
 # 忽略結果
 result/
 
+analyzer/result
+
+

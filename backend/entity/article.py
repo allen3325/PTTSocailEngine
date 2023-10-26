@@ -18,6 +18,7 @@ Article:
 '''
 from entity.comment import Comment
 import requests
+from text_cleaner.text_cleaner import Text_Cleaner
 
 class Article:
     def __init__(self, type: str, artcle_id: str, article_title: str, user_id: str, user_nickname: str,
@@ -34,6 +35,7 @@ class Article:
         self.ip = ip
         self.tag = tag
         self.comments = self.__get_all_comment()
+        self.tc = Text_Cleaner()
 
     def __get_all_comment(self) -> [Comment]:
         all_comment = []
@@ -55,13 +57,13 @@ class Article:
     
     def get_all_comment_list(self) -> [str]:
         all_comment = []
-        url = f'http://ptt-search.nlpnchu.org/api/GetCommentByArticle?article_id={self.artcle_id}'
+        # url = f'http://ptt-search.nlpnchu.org/api/GetCommentByArticle?article_id={self.artcle_id}'
         
-        print(url)
-        res = requests.get(url, {'Accept': 'application/json'})
-        res = res.json()
+        # print(url)
+        # res = requests.get(url, {'Accept': 'application/json'})
+        # res = res.json()
         for comment in self.comments:
-            all_comment.append(comment.content)
+            all_comment.append(self.tc.clean_URL(comment.content))
         return all_comment
 
     
