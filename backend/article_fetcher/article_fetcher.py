@@ -1,6 +1,7 @@
 import requests
 import json
 from entity.article import Article
+import re
 
 class Article_Fetcher:
     def __init__(self) -> None:
@@ -25,8 +26,9 @@ class Article_Fetcher:
             if count_for_K >= K:
                 break
             article_title = hit['_source']['article_title']
+            title_re_exist = re.search(r'Re:', article_title)
             article_tag = article_title[article_title.find('[')+1:article_title.find(']')]
-            if tag is not None and article_tag == tag:
+            if tag is not None and article_tag == tag and not title_re_exist:
                 article = Article(type=hit['_source']['type'],
                         artcle_id=hit['_source']['article_id'],
                         article_title=hit['_source']['article_title'],
