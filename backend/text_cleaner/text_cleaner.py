@@ -26,7 +26,7 @@ class Text_Cleaner:
         String_without_URL = re.sub(self.url_pattern, '', input_text)
         return String_without_URL   
     def clean_text(self, input_text : str):
-        print("------processing input article------")
+        #print("------processing input article------")
         
         #刪除備註、簽名檔(包含\n的多行) -> (6.){(備註)|(--簽名檔\n\n\n\n....--)}
         cleaned_text = re.sub(rf'(\d?\.?)((備註)|(--\n)).*','',input_text,flags=re.DOTALL)
@@ -44,5 +44,5 @@ class Text_Cleaner:
         for word in self.stop_words:
             cleaned_text = cleaned_text.replace(word, '')
         
-        print("-------saved cleaned_article.txt------")
+        #print("-------saved cleaned_article.txt------")
         return cleaned_text
