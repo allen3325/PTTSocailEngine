@@ -58,7 +58,7 @@ class Analyzer:
                 "role": "system", "content": system,
                 "role": "user", "content": prompt,
                 }],
-            temperature=0.8,
+            temperature=1,
         )
         print(response['choices'][0]['message']['content'])
 
@@ -81,7 +81,8 @@ class Analyzer:
 
         # print(contents)
 
-        for i in range(K):
+        # for i in range(K):
+        for i in range(len(contents)):
             # prompt = """現在給你[文章]以及[留言]，請對文章做總結\n並且列出你覺得跟這篇文章內容有高度相關的代表性留言。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
             prompt = """現在給你[文章]以及[留言]，請對文章做200字以內總結\n並且條列式列出你覺得跟這篇文章內容有高度相關的留言(最多30則留言)。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
             self.prompt_input("你是一位在臺灣的資深時事分析專家",prompt)
