@@ -96,7 +96,7 @@ class Word_Cloud:
     def chatGPT_clustering_words(self, table: dict):
         print("=============== Call ChatGPT ===============")
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-16k-0613",
+            model="gpt-3.5-turbo-1106",
             messages=[{"role": "user", "content": self.generate_prompt(table)}],
             temperature=0
             # frequency_penalty=0,

@@ -4,7 +4,7 @@ class Text_Cleaner:
         # loading 過濾詞表 stop_words.txt
         #self.stop_words = self.load_stop_words('./text_cleaner/stop_words.txt')
         #self.stop_words=['媒體','中央社','中時','民視','三立','自由時報','科技新報','記者','編輯','報導','新聞','來源','即時中心','示意圖']
-        self.stop_words = self.load_stop_words("/user_data/PTTSocailEngine/backend/text_cleaner/stop_words.txt")
+        self.stop_words = self.load_stop_words("./text_cleaner/stop_words.txt")
         # url regular expression
         self.url_pattern = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 

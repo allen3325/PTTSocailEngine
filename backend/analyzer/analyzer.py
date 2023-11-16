@@ -35,7 +35,7 @@ class Analyzer:
     def prompt_input(self,system: str,prompt: str):
         print("=============== Call ChatGPT ===============")
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-16k-0613",
+            model="gpt-3.5-turbo-1106",
             messages=[{
                 "role": "system", "content": system,
                 "role": "user", "content": prompt,
@@ -53,12 +53,12 @@ class Analyzer:
     def prompt_report(self,system: str,prompt: str):
         print("=============== Call ChatGPT ===============")
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-16k-0613",
+            model="gpt-3.5-turbo-1106",
             messages=[{
                 "role": "system", "content": system,
                 "role": "user", "content": prompt,
                 }],
-            temperature=0,
+            temperature=0.8,
         )
         print(response['choices'][0]['message']['content'])
 
@@ -78,6 +78,8 @@ class Analyzer:
             article.content=self.TC.clean_text(article.content)
             contents.append(article.content)
             comments.append(article.get_all_comment_list())
+
+        # print(contents)
 
         for i in range(K):
             # prompt = """現在給你[文章]以及[留言]，請對文章做總結\n並且列出你覺得跟這篇文章內容有高度相關的代表性留言。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
