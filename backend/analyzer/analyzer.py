@@ -147,7 +147,7 @@ class Analyzer:
         # Get report and detect dictionary should be clear from ram
         elif uuid in Analyzer.response_db:
             report = Analyzer.response_db[uuid]
-            if len(Analyzer.response_db) > 1000:
+            if len(Analyzer.response_db) > 100:
                 Analyzer.response_db.clear()
             return report
         # Used to return 404
