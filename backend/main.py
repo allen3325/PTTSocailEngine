@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status, Response
 # from word_cloud.word_cloud import Word_Cloud
 # from word_fetcher.word_fetcher import Word_Fetcher
 # from comment_fetcher.comment_fetcher import Comment_Fetcher
@@ -9,9 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-origins = [
-    "*"
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,19 +20,37 @@ app.add_middleware(
 )
 
 
-@app.get("/article/{keyword}",description='keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。')
-async def get_article_by_keyword(keyword: str, tag: str = None, K: int = 5, size: int = 100, start: int = None, end: int = None):
+@app.get(
+    "/article/{keyword}",
+    description="keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。",
+)
+async def get_article_by_keyword(
+    keyword: str,
+    tag: str = None,
+    K: int = 5,
+    size: int = 100,
+    start: int = None,
+    end: int = None,
+):
     af = Article_Fetcher()
-    return af.get_article_by_keyword(keyword=keyword, tag=tag, K=K, size=size, start=start, end=end)
+    return af.get_article_by_keyword(
+        keyword=keyword, tag=tag, K=K, size=size, start=start, end=end
+    )
 
 
-@app.get("/analyze/{keyword}",description='keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。')
-async def analyze_by_keyword(keyword: str,
-                             tag: str = None,
-                             K: int = 5,
-                             size: int = 100,
-                             start: int = None,
-                             end: int = None):
+@app.post(
+    "/analyze/{keyword}",
+    description="keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。",
+)
+async def analyze_by_keyword(
+    keyword: str,
+    uuidOfSession: str,
+    tag: str = None,
+    K: int = 5,
+    size: int = 100,
+    start: int = None,
+    end: int = None,
+):
     if keyword == "test_for_NCHU_NLP_LAB":
         return """# 事件總結標題：柯文哲與侯友宜的合作問題引發網友熱議
 
@@ -46,13 +62,27 @@ async def analyze_by_keyword(keyword: str,
 | 侯友宜願意接受「柯侯配」，但柯文哲要回覆是否同意，否則進入政黨協商。 | - 侯的說法就像是告訴柯，你吃屎我就當副手 <br> - 在一個對方不可能接受的前題下，才願意當副 <br> - 侯腦想要用條件限制柯，真的科科笑 |
 
 #### 總結：根據留言的分析，網友對於柯文哲與侯友宜的合作問題持有不同的看法。有些人認為柯文哲的做法是為了匯聚民間力量，達成政黨輪替的目標，並且提出了具體的辦法和數字，對於侯友宜的質疑感到不滿。另一方面，也有人認為侯友宜願意接受「柯侯配」，但柯文哲要回覆是否同意，否則進入政黨協商的態度是在限制柯文哲的選擇，並且對侯友宜的做法感到不滿。綜合來看，網友對於柯文哲與侯友宜的合作問題持有不同的觀點，並且對於侯友宜的做法有所質疑。"""
-    analyzer_test = Analyzer()
-    return analyzer_test.prompt_analyzer(keyword=keyword,
-                                         tag=tag,
-                                         K=K,
-                                         size=size,
-                                         start=start,
-                                         end=end)
+    analyzer = Analyzer()
+    print(f"------------------- received uuid {uuidOfSession}.")
+    analyzer.prompt_analyzer(
+        keyword=keyword,
+        tag=tag,
+        K=K,
+        size=size,
+        start=start,
+        end=end,
+        uuid=uuidOfSession,
+    )
+
+
+@app.get("/check/{uuid}", description="前端使用 uuid polling 確認 GPT 是否已經回應")
+async def check_GPT_response(uuid: str, response: Response):
+    analyzer = Analyzer()
+    res = analyzer.check_response(uuid)
+    if res == 'not ready':
+        response.status_code = status.HTTP_404_NOT_FOUND
+    return res
+
 
 # @app.get("/word/cloud/{search_keyword}")
 # async def generate_word_cloud(search_keyword, K: int = 100):
