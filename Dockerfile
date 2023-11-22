@@ -12,7 +12,7 @@ WORKDIR /code/backend
 
 # RUN cd backend/
 
-EXPOSE 8000
+EXPOSE 11251
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "11251", "--workers", "4"]
 # uvicorn main:app --host 0.0.0.0 --port 11253 --workers 4
