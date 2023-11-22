@@ -7,6 +7,7 @@ from fastapi import FastAPI, status, Response
 from article_fetcher.article_fetcher import Article_Fetcher
 from analyzer.analyzer import Analyzer
 from fastapi.middleware.cors import CORSMiddleware
+import asyncio
 
 app = FastAPI()
 
@@ -66,15 +67,22 @@ async def analyze_by_keyword(
 #### 總結：根據留言的分析，網友對於柯文哲與侯友宜的合作問題持有不同的看法。有些人認為柯文哲的做法是為了匯聚民間力量，達成政黨輪替的目標，並且提出了具體的辦法和數字，對於侯友宜的質疑感到不滿。另一方面，也有人認為侯友宜願意接受「柯侯配」，但柯文哲要回覆是否同意，否則進入政黨協商的態度是在限制柯文哲的選擇，並且對侯友宜的做法感到不滿。綜合來看，網友對於柯文哲與侯友宜的合作問題持有不同的觀點，並且對於侯友宜的做法有所質疑。"""
     analyzer = Analyzer()
     print(f"------------------- received uuid {uuidOfSession}.")
-    analyzer.prompt_analyzer(
-        keyword=keyword,
-        tag=tag,
-        K=K,
-        size=size,
-        start=start,
-        end=end,
-        uuid=uuidOfSession,
-    )
+    # 將 analyzer.prompt_analyzer 放入非同步的任務
+    async def analyze_task():
+        await asyncio.sleep(0)  # 讓主事件迴圈有機會執行其他任務
+        analyzer.prompt_analyzer(
+            keyword=keyword,
+            tag=tag,
+            K=K,
+            size=size,
+            start=start,
+            end=end,
+            uuid=uuidOfSession,
+        )
+
+    asyncio.create_task(analyze_task())  # 在背景執行分析任務
+
+    return status.HTTP_200_OK  # 立即回傳 200
 
 
 @app.get("/check/{uuid}", description="前端使用 uuid polling 確認 GPT 是否已經回應")
