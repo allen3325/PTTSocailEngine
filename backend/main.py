@@ -1,3 +1,4 @@
+import time
 from fastapi import FastAPI, status, Response
 # from word_cloud.word_cloud import Word_Cloud
 # from word_fetcher.word_fetcher import Word_Fetcher
@@ -52,6 +53,7 @@ async def analyze_by_keyword(
     end: int = None,
 ):
     if keyword == "test_for_NCHU_NLP_LAB":
+        time.sleep(1)
         return """# 事件總結標題：柯文哲與侯友宜的合作問題引發網友熱議
 
 | 事件觀點 | 留言對此觀點的看法 |
