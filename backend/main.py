@@ -1,5 +1,6 @@
 import os
-from fastapi import FastAPI, status, Response
+from entity.resultDTO import ResultDTO
+from fastapi import FastAPI, status, Response, Body, HTTPException
 # from word_cloud.word_cloud import Word_Cloud
 # from word_fetcher.word_fetcher import Word_Fetcher
 # from comment_fetcher.comment_fetcher import Comment_Fetcher
@@ -9,22 +10,11 @@ from analyzer.analyzer import Analyzer
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 from dotenv import load_dotenv
-from typing_extensions import Annotated
 import motor.motor_asyncio
-from pydantic import ConfigDict, BaseModel, Field, EmailStr
-from pydantic.functional_validators import BeforeValidator
+from db.db_connect import result_collection
 
 
 app = FastAPI()
-
-load_dotenv()
-client = motor.motor_asyncio.AsyncIOMotorClient(os.getenv("MONGODB_URL"))
-db = client.college
-student_collection = db.get_collection("result")
-
-# Represents an ObjectId field in the database.
-# It will be represented as a `str` on the model so that it can be serialized to JSON.
-PyObjectId = Annotated[str, BeforeValidator(str)]
 
 origins = ["*"]
 
@@ -82,9 +72,10 @@ async def analyze_by_keyword(
     analyzer = Analyzer()
     print(f"------------------- received uuid {uuidOfSession}.")
 
+
     # 將 analyzer.prompt_analyzer 放入背景任務
     async def analyze_task():
-        await analyzer.prompt_analyzer(
+        analyzer.prompt_analyzer(
             keyword=keyword,
             tag=tag,
             K=K,
@@ -100,14 +91,52 @@ async def analyze_by_keyword(
     return status.HTTP_200_OK  # 立即回傳 200
 
 
-@app.get("/check/{uuid}", description="前端使用 uuid polling 確認 GPT 是否已經回應")
-async def check_GPT_response(uuid: str, response: Response):
-    analyzer = Analyzer()
-    res = analyzer.check_response(uuid)
-    if res == 'not ready':
-        response.status_code = status.HTTP_404_NOT_FOUND
-    return res
+# @app.get("/check/{uuid}", description="前端使用 uuid polling 確認 GPT 是否已經回應")
+# async def check_GPT_response(uuid: str, response: Response):
+#     analyzer = Analyzer()
+#     res = analyzer.check_response(uuid)
+#     if res == 'not ready':
+#         response.status_code = status.HTTP_404_NOT_FOUND
+#     return res
 
+@app.post(
+    "/results/",
+    response_description="Add new result",
+    response_model=ResultDTO,
+    status_code=status.HTTP_201_CREATED,
+    response_model_by_alias=False,
+)
+async def create_result(result: ResultDTO = Body(...)):
+    """
+    Insert a new student record.
+
+    A unique `id` will be created and provided in the response.
+    """
+    new_result = await result_collection.insert_one(
+        result.model_dump(by_alias=True, exclude=["id"])
+    )
+    created_result = await result_collection.find_one(
+        {"_id": new_result.inserted_id}
+    )
+    return created_result
+
+
+@app.get(
+    "/results/{id}",
+    response_description="Get a single result",
+    response_model=ResultDTO,
+    response_model_by_alias=False,
+)
+async def get_result(id: str):
+    """
+    Get the record for a specific student, looked up by `id`.
+    """
+    if (
+        result := await result_collection.find_one({"session_id": id})
+    ) is not None:
+        return result
+
+    raise HTTPException(status_code=404, detail=f"UUID {id} not found")
 
 # @app.get("/word/cloud/{search_keyword}")
 # async def generate_word_cloud(search_keyword, K: int = 100):

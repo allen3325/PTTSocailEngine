@@ -1,9 +1,10 @@
+from entity.resultDTO import ResultDTO
 import openai
 import os
 from dotenv import load_dotenv
 from article_fetcher.article_fetcher import Article_Fetcher
 from text_cleaner.text_cleaner import Text_Cleaner
-
+from db.db_connect import result_collection
 
 class Analyzer:
     # This global variable is to save GPT's response. Use UUID check response,
@@ -100,6 +101,17 @@ class Analyzer:
         print(f"------------------- start of {uuid} session.")
         contents = []
         comments = []
+        # Read article's summary to list
+        content_and_comment = ""
+        content_and_comment_list = []
+
+        # Create result model
+        result = ResultDTO(
+            result="initial_result",
+            keyword=keyword,
+            date=str(start) + '-' + str(end),
+            session_id=uuid
+        )
 
         # Retrieve related article
         prompt_AF = self.AF.get_article_by_keyword(
@@ -120,13 +132,10 @@ class Analyzer:
                 + "\n[留言]\n"
                 + str(comments[i])
             )
-            self.prompt_input("你是一位在臺灣的資深時事分析專家", prompt)
+            content_and_comment_list.append(self.prompt_input("你是一位在臺灣的資深時事分析專家", prompt))
 
-        # Read article's summary to list
-        content_and_comment = ""
-        content_and_comment_list = []
-        with open("./result/prompt_summary.txt", "r") as file:
-            content_and_comment_list = file.readlines()
+        # with open("./result/prompt_summary.txt", "r") as file:
+        #     content_and_comment_list = file.readlines()
         for content in content_and_comment_list:
             content_and_comment += content
 
@@ -136,20 +145,25 @@ class Analyzer:
             + content_and_comment
         )
         res = self.prompt_report("你是一位在台灣的資深時事分析專家", prompt)
+        print(f"------------------- report generate done.")
+        result.result = res
 
-        # Save response to global variable response_db
-        Analyzer.response_db[uuid] = res
+        result_collection.insert_one(
+            result.dict(by_alias=True, exclude=["id"])
+        )
+        print(f"------------------- save {result.session_id} to db done.")
 
-    def check_response(self, uuid: str):
-        print(f"Analyzer.response_db is {Analyzer.response_db}")
-        if uuid == "":
-            return "Empty UUID."
-        # Get report and detect dictionary should be clear from ram
-        elif uuid in Analyzer.response_db:
-            report = Analyzer.response_db[uuid]
-            if len(Analyzer.response_db) > 100:
-                Analyzer.response_db.clear()
-            return report
-        # Used to return 404
-        else:
-            return 'not ready'
+
+    # def check_response(self, uuid: str):
+    #     print(f"Analyzer.response_db is {Analyzer.response_db}")
+    #     if uuid == "":
+    #         return "Empty UUID."
+    #     # Get report and detect dictionary should be clear from ram
+    #     elif uuid in Analyzer.response_db:
+    #         report = Analyzer.response_db[uuid]
+    #         if len(Analyzer.response_db) > 100:
+    #             Analyzer.response_db.clear()
+    #         return report
+    #     # Used to return 404
+    #     else:
+    #         return 'not ready'
