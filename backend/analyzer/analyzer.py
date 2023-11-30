@@ -83,8 +83,7 @@ class Analyzer:
 
         # for i in range(K):
         for i in range(len(contents)):
-            # prompt = """現在給你[文章]以及[留言]，請對文章做總結\n並且列出你覺得跟這篇文章內容有高度相關的代表性留言。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
-            prompt = """現在給你[文章]以及[留言]，請對文章做200字以內總結\n並且條列式列出你覺得跟這篇文章內容有高度相關的留言(最多30則留言)。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
+            prompt = """現在給你[文章]以及[留言]，請對文章做200字以內總結\n並且條列式列出你覺得跟這篇文章內容有高度相關的留言(最多100則留言)。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
             self.prompt_input("你是一位在臺灣的資深時事分析專家",prompt)
         
         content_and_comment = ""
@@ -93,13 +92,13 @@ class Analyzer:
             content_and_comment_list = file.readlines()
         for content in content_and_comment_list:
             content_and_comment += content
-            
-        # prompt ="你是一位時事分析專家，我會給你幾篇(文章)以及(留言)，請綜合分析這些留言對事件的風向看法，以及留言對事件的觀點為何?\n給出一個對事件總結的標題，以及做一個[表格]分析，[表格]以markdown language呈現，需要列出事件的觀點，以及留言對此觀點的看法\n" + content_and_comment
-        prompt ="我會給你幾篇(文章)以及(留言)，請綜合分析這些留言對事件的風向看法，以及留言對事件的觀點為何?\n給出一個對事件總結的標題。以及做一個表格分析，表格以markdown language呈現，需要列出事件的觀點，以及留言對此觀點的看法(每個觀點最多10則留言)\n" + content_and_comment
-        #print(prompt)
+        
+        prompt ="""你是一位時事分析專家，我會給你幾篇(文章)以及(留言)，請綜合分析這些留言對事件的風向看法，以及留言對事件的觀點為何?\n給出一個對事件總結的標題，以及做一個[表格]分析，[表格]以markdown language呈現，
+        (1)列出事件的觀點\n
+        (2)對此觀點的詳細描述或是依據\n
+        (3)留言對此觀點的看法(每個觀點最多10則留言)\n""" + content_and_comment
 
         res = self.prompt_report("你是一位在台灣的資深時事分析專家",prompt)
-
         return res
 
 # if __name__ == '__main__':
