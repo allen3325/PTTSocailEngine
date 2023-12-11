@@ -99,26 +99,26 @@ async def analyze_by_keyword(
 #         response.status_code = status.HTTP_404_NOT_FOUND
 #     return res
 
-@app.post(
-    "/results/",
-    response_description="Add new result",
-    response_model=ResultDTO,
-    status_code=status.HTTP_201_CREATED,
-    response_model_by_alias=False,
-)
-async def create_result(result: ResultDTO = Body(...)):
-    """
-    Insert a new student record.
+# @app.post(
+#     "/results/",
+#     response_description="Add new result",
+#     response_model=ResultDTO,
+#     status_code=status.HTTP_201_CREATED,
+#     response_model_by_alias=False,
+# )
+# async def create_result(result: ResultDTO = Body(...)):
+#     """
+#     Insert a new student record.
 
-    A unique `id` will be created and provided in the response.
-    """
-    new_result = await result_collection.insert_one(
-        result.model_dump(by_alias=True, exclude=["id"])
-    )
-    created_result = await result_collection.find_one(
-        {"_id": new_result.inserted_id}
-    )
-    return created_result
+#     A unique `id` will be created and provided in the response.
+#     """
+#     new_result = await result_collection.insert_one(
+#         result.model_dump(by_alias=True, exclude=["id"])
+#     )
+#     created_result = await result_collection.find_one(
+#         {"_id": new_result.inserted_id}
+#     )
+#     return created_result
 
 
 @app.get(
