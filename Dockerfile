@@ -14,6 +14,4 @@ WORKDIR /code/backend
 
 EXPOSE 11251
 
-# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "11251", "--workers", "4"]
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "11251", "--workers", "12"]
-# uvicorn main:app --host 0.0.0.0 --port 11253 --workers 4

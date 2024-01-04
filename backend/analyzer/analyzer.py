@@ -126,6 +126,9 @@ class Analyzer:
 
         # Generate article's summary to text file
         for i in range(len(contents)):
+            # new prompt
+            # prompt = """現在給你[文章]以及[留言]，請對文章做200字以內總結\n並且條列式列出你覺得跟這篇文章內容有高度相關的留言(最多100則留言)。回復格式為\n(文章):\n(留言):\n[文章]\n"""+str(contents[i])+"\n[留言]\n"+str(comments[i])
+            # old prompt
             prompt = (
                 """現在給你[文章]以及[留言]，請對文章做200字以內總結\n並且條列式列出你覺得跟這篇文章內容有高度相關的留言(最多30則留言)。回復格式為\n(文章):\n(留言):\n[文章]\n"""
                 + str(contents[i])
@@ -140,11 +143,18 @@ class Analyzer:
             content_and_comment += content
 
         # Generate report
+        # new prompt
+#         prompt ="""你是一位時事分析專家，我會給你幾篇(文章)以及(留言)，請綜合分析這些留言對事件的風向看法，以及留言對事件的觀點為何?\n給出一個對事件總結的標題，以及做一個[表格]分析，[表格]以markdown language呈現，
+#         (1)列出事件的觀點\n
+#         (2)對此觀點的詳細描述或是依據\n
+#         (3)留言對此觀點的看法(每個觀點最多10則留言)\n""" + content_and_comment
+        # old prompt
         prompt = (
             "我會給你幾篇(文章)以及(留言)，請綜合分析這些留言對事件的風向看法，以及留言對事件的觀點為何?\n給出一個對事件總結的標題。以及做一個表格分析，表格以markdown language呈現，需要列出事件的觀點，以及留言對此觀點的看法(每個觀點最多10則留言)\n"
             + content_and_comment
         )
         res = self.prompt_report("你是一位在台灣的資深時事分析專家", prompt)
+        
         print(f"------------------- report generate done.")
         result.result = res
 
@@ -152,7 +162,6 @@ class Analyzer:
             result.dict(by_alias=True, exclude=["id"])
         )
         print(f"------------------- save {result.session_id} to db done.")
-
 
     # def check_response(self, uuid: str):
     #     print(f"Analyzer.response_db is {Analyzer.response_db}")
