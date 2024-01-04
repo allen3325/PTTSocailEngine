@@ -1,17 +1,11 @@
-import os
 from entity.resultDTO import ResultDTO
-from fastapi import FastAPI, status, Response, Body, HTTPException
-# from word_cloud.word_cloud import Word_Cloud
-# from word_fetcher.word_fetcher import Word_Fetcher
-# from comment_fetcher.comment_fetcher import Comment_Fetcher
-# from text_cleaner.text_cleaner import Text_Cleaner
+from fastapi import FastAPI, status, HTTPException
 from article_fetcher.article_fetcher import Article_Fetcher
 from analyzer.analyzer import Analyzer
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
-from dotenv import load_dotenv
-import motor.motor_asyncio
 from db.db_connect import result_collection
+from entity.analyze_body import AnalyzeBody
 
 
 app = FastAPI()
@@ -27,38 +21,32 @@ app.add_middleware(
 )
 
 
-@app.get(
-    "/article/{keyword}",
-    description="keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。",
-)
-async def get_article_by_keyword(
-    keyword: str,
-    tag: str = None,
-    K: int = 5,
-    size: int = 100,
-    start: int = None,
-    end: int = None,
-):
-    af = Article_Fetcher()
-    return af.get_article_by_keyword(
-        keyword=keyword, tag=tag, K=K, size=size, start=start, end=end
-    )
+# @app.get(
+#     "/article/{keyword}",
+#     description="keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。",
+# )
+# async def get_article_by_keyword(
+#     keyword: str,
+#     tag: str = None,
+#     K: int = 5,
+#     size: int = 100,
+#     start: int = None,
+#     end: int = None,
+# ):
+#     af = Article_Fetcher()
+#     return af.get_article_by_keyword(
+#         keyword=keyword, tag=tag, K=K, size=size, start=start, end=end
+#     )
 
 
 @app.post(
-    "/analyze/{keyword}",
+    "/analyze/",
     description="keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。",
 )
 async def analyze_by_keyword(
-    keyword: str,
-    uuidOfSession: str,
-    tag: str = None,
-    K: int = 5,
-    size: int = 100,
-    start: int = None,
-    end: int = None,
+    analyze_body: AnalyzeBody
 ):
-    if keyword == "test_for_NCHU_NLP_LAB":
+    if analyze_body.keyword == "test_for_NCHU_NLP_LAB":
         return """# 事件總結標題：柯文哲與侯友宜的合作問題引發網友熱議
 
 | 事件觀點 | 留言對此觀點的看法 |
@@ -70,55 +58,24 @@ async def analyze_by_keyword(
 
 #### 總結：根據留言的分析，網友對於柯文哲與侯友宜的合作問題持有不同的看法。有些人認為柯文哲的做法是為了匯聚民間力量，達成政黨輪替的目標，並且提出了具體的辦法和數字，對於侯友宜的質疑感到不滿。另一方面，也有人認為侯友宜願意接受「柯侯配」，但柯文哲要回覆是否同意，否則進入政黨協商的態度是在限制柯文哲的選擇，並且對侯友宜的做法感到不滿。綜合來看，網友對於柯文哲與侯友宜的合作問題持有不同的觀點，並且對於侯友宜的做法有所質疑。"""
     analyzer = Analyzer()
-    print(f"------------------- received uuid {uuidOfSession}.")
-
+    print(f"------------------- received uuid {analyze_body.uuidOfSession}.")
 
     # 將 analyzer.prompt_analyzer 放入背景任務
     async def analyze_task():
         analyzer.prompt_analyzer(
-            keyword=keyword,
-            tag=tag,
-            K=K,
-            size=size,
-            start=start,
-            end=end,
-            uuid=uuidOfSession,
+            keyword=analyze_body.keyword,
+            tag=analyze_body.tag,
+            K=analyze_body.K,
+            size=analyze_body.size,
+            start=analyze_body.start,
+            end=analyze_body.end,
+            uuid=analyze_body.uuidOfSession,
         )
 
     # 使用 asyncio.ensure_future 確保 analyze_task 的執行
     asyncio.ensure_future(analyze_task())
 
     return status.HTTP_200_OK  # 立即回傳 200
-
-
-# @app.get("/check/{uuid}", description="前端使用 uuid polling 確認 GPT 是否已經回應")
-# async def check_GPT_response(uuid: str, response: Response):
-#     analyzer = Analyzer()
-#     res = analyzer.check_response(uuid)
-#     if res == 'not ready':
-#         response.status_code = status.HTTP_404_NOT_FOUND
-#     return res
-
-# @app.post(
-#     "/results/",
-#     response_description="Add new result",
-#     response_model=ResultDTO,
-#     status_code=status.HTTP_201_CREATED,
-#     response_model_by_alias=False,
-# )
-# async def create_result(result: ResultDTO = Body(...)):
-#     """
-#     Insert a new student record.
-
-#     A unique `id` will be created and provided in the response.
-#     """
-#     new_result = await result_collection.insert_one(
-#         result.model_dump(by_alias=True, exclude=["id"])
-#     )
-#     created_result = await result_collection.find_one(
-#         {"_id": new_result.inserted_id}
-#     )
-#     return created_result
 
 
 @app.get(
@@ -131,12 +88,11 @@ async def get_result(id: str):
     """
     Get the record for a specific student, looked up by `id`.
     """
-    if (
-        result := await result_collection.find_one({"session_id": id})
-    ) is not None:
+    if (result := await result_collection.find_one({"session_id": id})) is not None:
         return result
 
     raise HTTPException(status_code=404, detail=f"UUID {id} not found")
+
 
 # @app.get("/word/cloud/{search_keyword}")
 # async def generate_word_cloud(search_keyword, K: int = 100):
