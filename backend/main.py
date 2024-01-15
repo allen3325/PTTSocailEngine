@@ -1,3 +1,4 @@
+from get_hot.finance_hot import Finance_hot_fetcher
 from entity.resultDTO import ResultDTO
 from fastapi import FastAPI, status, HTTPException
 from article_fetcher.article_fetcher import Article_Fetcher
@@ -43,9 +44,7 @@ app.add_middleware(
     "/analyze/",
     description="keyword: 關鍵字, tag: 分類標籤(預設 None), K: TOP K, size: 搜尋幾個(預設100), start: 開始的timestamp(預設 None), end: 結束的timestamp(預設 None)\n 若預設為 None，代表為全抓。",
 )
-async def analyze_by_keyword(
-    analyze_body: AnalyzeBody
-):
+async def analyze_by_keyword(analyze_body: AnalyzeBody):
     if analyze_body.keyword == "test_for_NCHU_NLP_LAB":
         return """# 事件總結標題：柯文哲與侯友宜的合作問題引發網友熱議
 
@@ -92,6 +91,23 @@ async def get_result(id: str):
         return result
 
     raise HTTPException(status_code=404, detail=f"UUID {id} not found")
+
+
+@app.post(
+    "/finance/hot",
+    description="start: 開始的timestamp, end: 結束的timestamp, size: 搜尋幾個(預設10000), page: 第幾頁(預設0), K: TOP K",
+)
+async def get_hot_company_today(
+    start: int,
+    end: int,
+    size: int = 10000,
+    page: int = 0,
+    K: int = 10,
+    news_K: int = 5,
+    news_period: int = 2,
+):
+    fh = Finance_hot_fetcher(K=K, news_K=news_K, news_period=news_period)
+    return fh.fetch_hot_company_today(start, end, size, page)
 
 
 # @app.get("/word/cloud/{search_keyword}")

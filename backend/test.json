@@ -1,0 +1,2010 @@
+{
+    "total": {
+        "value": 7085,
+        "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "ddd7ed0b7d88bade807f56b7a1e70707",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "Kenhon",
+                "content": "別怕 明天繼續大爆噴 我知道黑手還有很多錢 cc",
+                "comment_tag": "→",
+                "date": 1704297544
+            },
+            "sort": [
+                1704297544000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "ff5598ba56b523d2f9b9f0dd6249838c",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "mamorui",
+                "content": "哈 來個真的神仙也無法阻擋",
+                "comment_tag": "推",
+                "date": 1704297543
+            },
+            "sort": [
+                1704297543000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "50b3d0f5ab750f4469b907d96435096e",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "Eide",
+                "content": "我記得冰綠債息領超多的，部位很大",
+                "comment_tag": "→",
+                "date": 1704297542
+            },
+            "sort": [
+                1704297542000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "471c3c8ca4222f9c0d69e351e61a6a1d",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "YesNoter",
+                "content": "尼們怎麼忘了河谷八冰龍的八",
+                "comment_tag": "噓",
+                "date": 1704297541
+            },
+            "sort": [
+                1704297541000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "8a39fbfc9b22b39b220ee24cd63bf49c",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "lmc66",
+                "content": "丸子",
+                "comment_tag": "推",
+                "date": 1704297540
+            },
+            "sort": [
+                1704297540000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "9143aec2adc2d9202a93d1c9788619dd",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "jo4",
+                "content": "我們錯怪黑橘了",
+                "comment_tag": "推",
+                "date": 1704297540
+            },
+            "sort": [
+                1704297540000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "8f7c2d72d84231a63f37fc17d114faef",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "magicee01",
+                "content": "燈米鎂",
+                "comment_tag": "→",
+                "date": 1704297540
+            },
+            "sort": [
+                1704297540000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "49cfb0a10d7586861fdf38e02aee2c87",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "goye",
+                "content": "鬼指翻紅了 準備噴出吧 直接第四節開打",
+                "comment_tag": "推",
+                "date": 1704297481
+            },
+            "sort": [
+                1704297481000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "6c924a4a53d25bfc4d85a96f8f228d13",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293941.A.936.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293941.A.936",
+                "article_title": "[新聞] 今年全球晶圓大產能 中國18座新廠參戰",
+                "user_id": "kaiyu1",
+                "content": "真的嗎？hpc會用中國成熟製程？",
+                "comment_tag": "推",
+                "date": 1704297480
+            },
+            "sort": [
+                1704297480000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a4478b4f380fb5bd1ea6af4109ca91c9",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "kobeday",
+                "content": "反",
+                "comment_tag": "推",
+                "date": 1704297480
+            },
+            "sort": [
+                1704297480000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "d1a325a7bb04e50616caee1c978c07f0",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704288449.A.08A.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704288449.A.08A",
+                "article_title": "[情報] 113年01月03日信用交易統計",
+                "user_id": "LearnRPG",
+                "content": "都增在美債嗎 XD",
+                "comment_tag": "→",
+                "date": 1704297480
+            },
+            "sort": [
+                1704297480000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "2cd77e0903bcbceb6a2f95475f476fe3",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704261602.A.BF6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704261602.A.BF6",
+                "article_title": "[閒聊] 2024/01/03 盤後閒聊",
+                "user_id": "esproject",
+                "content": "仙姑救命阿",
+                "comment_tag": "推",
+                "date": 1704297480
+            },
+            "sort": [
+                1704297480000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "39fd3145b080f2fab8f8dee3936321ed",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293941.A.936.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293941.A.936",
+                "article_title": "[新聞] 今年全球晶圓大產能 中國18座新廠參戰",
+                "user_id": "lc85301",
+                "content": "二哥崩崩",
+                "comment_tag": "推",
+                "date": 1704297420
+            },
+            "sort": [
+                1704297420000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "55fe0ffd07026cbe9355b11008301b4f",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "boomberm",
+                "content": "這麼自信十年可以賺200%嗎",
+                "comment_tag": "推",
+                "date": 1704297300
+            },
+            "sort": [
+                1704297300000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "6f459a467b9ecc7918082ba48f6ea3e8",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "Shinn826",
+                "content": "又在炒空氣了",
+                "comment_tag": "推",
+                "date": 1704297300
+            },
+            "sort": [
+                1704297300000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "acd9189fc2e0ed7eb4e2697730705f7a",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "qaz12453",
+                "content": "沒差 大老金主又不在乎",
+                "comment_tag": "→",
+                "date": 1704297300
+            },
+            "sort": [
+                1704297300000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "902c8b91ae5728cc15b2b8f809245571",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "CDIAMOND",
+                "content": "人要知足",
+                "comment_tag": "推",
+                "date": 1704297300
+            },
+            "sort": [
+                1704297300000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "e0b383de8a870a5479ea6cfabe913e77",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "Lowpapa",
+                "content": "本多忠勝而已   其實沒多強",
+                "comment_tag": "→",
+                "date": 1704297240
+            },
+            "sort": [
+                1704297240000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "02e25f5f4bdd068f933c0a387ee2a931",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293532.A.779.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293532.A.779",
+                "article_title": "[新聞] 河谷聯手！台股新年連殺2天 網回顧預言急喊：你不要再說了",
+                "user_id": "Cheng2042",
+                "content": "無聊，爛新聞",
+                "comment_tag": "噓",
+                "date": 1704297180
+            },
+            "sort": [
+                1704297180000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "803e86cb6be9ea697838f35cdb1c8415",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "a0989169",
+                "content": "3709被低估的ai pc噴噴噴",
+                "comment_tag": "推",
+                "date": 1704297061
+            },
+            "sort": [
+                1704297061000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "04c0056108c5aaa57262c3fad986aa3f",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "mared",
+                "content": "搶先偷跑",
+                "comment_tag": "→",
+                "date": 1704297061
+            },
+            "sort": [
+                1704297061000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "5bbb5592390936dc568501f28bffde61",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "alphish",
+                "content": "如果航運也能AI　一定噴到天上",
+                "comment_tag": "推",
+                "date": 1704297060
+            },
+            "sort": [
+                1704297060000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3be94bbcb21689a4125283ad6f4a3b8d",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "heavensun",
+                "content": "王下758",
+                "comment_tag": "推",
+                "date": 1704297060
+            },
+            "sort": [
+                1704297060000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "d357e25355420752efc31c3ae2395cc3",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704289664.A.909.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704289664.A.909",
+                "article_title": "[新聞] 台股兩天跌掉371點 法人不悲觀、曝買點",
+                "user_id": "sandrasu",
+                "content": "沒有韭菜進場，急了",
+                "comment_tag": "推",
+                "date": 1704297000
+            },
+            "sort": [
+                1704297000000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a707b7f8cd66a4b06e501cf72f3b6d2a",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "j6569642",
+                "content": "不要看啊",
+                "comment_tag": "推",
+                "date": 1704297000
+            },
+            "sort": [
+                1704297000000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "6bf6c8788d64dec85e06bc46838e74d3",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "linweida",
+                "content": "死心吧  你大概永遠就羨慕的份",
+                "comment_tag": "→",
+                "date": 1704296881
+            },
+            "sort": [
+                1704296881000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "69d5765a692a65c7881a7456c348e27f",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "starport",
+                "content": "雙子星概念股",
+                "comment_tag": "推",
+                "date": 1704296880
+            },
+            "sort": [
+                1704296880000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3c6b9a594b93a53d400e3ca717fcdfa7",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "ben192726",
+                "content": "那都是幸存者偏差，其他90%都賠錢或賺不到十萬",
+                "comment_tag": "→",
+                "date": 1704296880
+            },
+            "sort": [
+                1704296880000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "e64ebc307e1ba00df30db81859e473d0",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293532.A.779.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293532.A.779",
+                "article_title": "[新聞] 河谷聯手！台股新年連殺2天 網回顧預言急喊：你不要再說了",
+                "user_id": "SRT0619",
+                "content": "怎麼沒提到冰律跟8zz？",
+                "comment_tag": "推",
+                "date": 1704296880
+            },
+            "sort": [
+                1704296880000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "332081b3e190ddd2a0d94c1318bdba99",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "linweida",
+                "content": "已經32歲才賺那麼一點.....",
+                "comment_tag": "→",
+                "date": 1704296821
+            },
+            "sort": [
+                1704296821000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "cc86379324c010ab04ebe751c8202f7a",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "linweida",
+                "content": "看你這樣子 40歲也不會有3000萬 ><",
+                "comment_tag": "推",
+                "date": 1704296820
+            },
+            "sort": [
+                1704296820000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "7a729477cbba34106dd35789688d07b6",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "ben192726",
+                "content": "Aipc 妖股代表",
+                "comment_tag": "推",
+                "date": 1704296820
+            },
+            "sort": [
+                1704296820000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "9f8c6f542184078f578060c1791e46c0",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704288759.A.05B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704288759.A.05B",
+                "article_title": "Re: [請益] 老王是不是過時投顧？",
+                "user_id": "bala045",
+                "content": "最看不懂的就是午報都有說 到底哪裡說XD?",
+                "comment_tag": "→",
+                "date": 1704296820
+            },
+            "sort": [
+                1704296820000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "f9a6f2ba6ad561743c793ca99e5007c8",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "Phamalpha",
+                "content": "這樣的心理素質真的好險你的策略很穩",
+                "comment_tag": "推",
+                "date": 1704296820
+            },
+            "sort": [
+                1704296820000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "d7e84a9d30ae1d10b47a9c448fc48afe",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293532.A.779.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293532.A.779",
+                "article_title": "[新聞] 河谷聯手！台股新年連殺2天 網回顧預言急喊：你不要再說了",
+                "user_id": "Xenia1050",
+                "content": "..",
+                "comment_tag": "噓",
+                "date": 1704296820
+            },
+            "sort": [
+                1704296820000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "9ae4870bc1313598c672fca87b423703",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293576.A.9F8.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293576.A.9F8",
+                "article_title": "[公告] 01/03 處置公告",
+                "user_id": "videoproblem",
+                "content": "免洗帳號大清倉",
+                "comment_tag": "推",
+                "date": 1704296760
+            },
+            "sort": [
+                1704296760000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "9507d5ad3a49c5b304b79d4c2027e61b",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704280172.A.AE9.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704280172.A.AE9",
+                "article_title": "Re: [情報] 6564 安特羅 112年9月營收",
+                "user_id": "iPodmilk",
+                "content": "高端市占90%",
+                "comment_tag": "推",
+                "date": 1704296760
+            },
+            "sort": [
+                1704296760000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "377b2d4861da7111b7dd78f252c5975a",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704288759.A.05B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704288759.A.05B",
+                "article_title": "Re: [請益] 老王是不是過時投顧？",
+                "user_id": "bala045",
+                "content": "老王最近追高殺低挺慘的",
+                "comment_tag": "推",
+                "date": 1704296700
+            },
+            "sort": [
+                1704296700000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "2aecf7661fd919b5156a681de958a984",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704266511.A.AD7.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704266511.A.AD7",
+                "article_title": "透視最新中國市值500強： 台積電重奪榜首，美團",
+                "user_id": "event1408472",
+                "content": "台灣一個那麼小的省 屌打拳中國",
+                "comment_tag": "推",
+                "date": 1704296700
+            },
+            "sort": [
+                1704296700000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "775569485d10fe892c1ca70a027d24eb",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "lonelysam",
+                "content": "中國連發音都是用英文字母 真的笑死人",
+                "comment_tag": "推",
+                "date": 1704296700
+            },
+            "sort": [
+                1704296700000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "72cc8fc1200d75bbe22e077925ebbeff",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "adngg579",
+                "content": "耐久..軍規..電競..AI..",
+                "comment_tag": "→",
+                "date": 1704296640
+            },
+            "sort": [
+                1704296640000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "5d8b1c8b9ccfbf1339679d84db8ec7fc",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "TaiwanUp",
+                "content": "河谷高摩 聽起來好像日本人的名字",
+                "comment_tag": "→",
+                "date": 1704296640
+            },
+            "sort": [
+                1704296640000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "6c5ae79eb849e6e104d090042d8248d9",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704289664.A.909.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704289664.A.909",
+                "article_title": "[新聞] 台股兩天跌掉371點 法人不悲觀、曝買點",
+                "user_id": "linwahaha",
+                "content": "17500找買點？",
+                "comment_tag": "推",
+                "date": 1704296640
+            },
+            "sort": [
+                1704296640000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a52612e3a685cad1bc256c1702168492",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704288759.A.05B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704288759.A.05B",
+                "article_title": "Re: [請益] 老王是不是過時投顧？",
+                "user_id": "fox123",
+                "content": "我覺得有點噁心",
+                "comment_tag": "推",
+                "date": 1704296580
+            },
+            "sort": [
+                1704296580000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "36b022af34818912699a3c4f9d9ca86a",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "event1408472",
+                "content": "錢 存一存錢還變多 爽翻",
+                "comment_tag": "→",
+                "date": 1704296522
+            },
+            "sort": [
+                1704296522000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "47c5507d9de88069a913740cdc69b305",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "event1408472",
+                "content": "人了 投資只是用來存錢而已 不然我的月光 然後我存",
+                "comment_tag": "→",
+                "date": 1704296521
+            },
+            "sort": [
+                1704296521000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "fd6ccd83dbc4277d21d7135baef669f1",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "bala045",
+                "content": "我選股版打嘴砲",
+                "comment_tag": "推",
+                "date": 1704296520
+            },
+            "sort": [
+                1704296520000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "aeddedac8224ef6e55e5c03798af2e71",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "bear31223",
+                "content": "現在換炒AI航運了 還再AI PC",
+                "comment_tag": "推",
+                "date": 1704296520
+            },
+            "sort": [
+                1704296520000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "f97718620a2e9dfb6b4d6403f2e342dd",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "event1408472",
+                "content": "還好我都沒這個煩惱 因為我知道我本業已經屌打一堆",
+                "comment_tag": "推",
+                "date": 1704296520
+            },
+            "sort": [
+                1704296520000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "6b7875237f563361e4fd282517da2b40",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "loveponpon",
+                "content": "年輕時候沒有錢 老了也不太可能有錢",
+                "comment_tag": "→",
+                "date": 1704296461
+            },
+            "sort": [
+                1704296461000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3357f3be45013b177f943530f36d3227",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293941.A.936.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293941.A.936",
+                "article_title": "[新聞] 今年全球晶圓大產能 中國18座新廠參戰",
+                "user_id": "kkchen",
+                "content": "這座神山外國無法取代。",
+                "comment_tag": "→",
+                "date": 1704296461
+            },
+            "sort": [
+                1704296461000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "c8edea2a10eebb11230f33349fd08ac1",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "loveponpon",
+                "content": "我選2",
+                "comment_tag": "推",
+                "date": 1704296460
+            },
+            "sort": [
+                1704296460000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "cb77c7cacefa28c48c17b6d554a7962c",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293941.A.936.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293941.A.936",
+                "article_title": "[新聞] 今年全球晶圓大產能 中國18座新廠參戰",
+                "user_id": "kkchen",
+                "content": "還好政府已經選定房地產為台灣的第二座護國神山，",
+                "comment_tag": "推",
+                "date": 1704296460
+            },
+            "sort": [
+                1704296460000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "f96ba4ef499beb64af658e9ab94247f8",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294100.A.B55.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294100.A.B55",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "alphish",
+                "content": "賺錢就是這麼簡單~",
+                "comment_tag": "推",
+                "date": 1704296460
+            },
+            "sort": [
+                1704296460000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "54d6b30d547d44fc478330b56c3c491c",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "hcwang1126",
+                "content": "猴豬概念股？",
+                "comment_tag": "推",
+                "date": 1704296460
+            },
+            "sort": [
+                1704296460000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "46aabeaeeedf68542bf616ff013b993c",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "x58420",
+                "content": "反觀",
+                "comment_tag": "推",
+                "date": 1704296460
+            },
+            "sort": [
+                1704296460000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "dd8e334085355000ee4334e44b5f4f8e",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "event1408472",
+                "content": "準備看套牢秀",
+                "comment_tag": "推",
+                "date": 1704296400
+            },
+            "sort": [
+                1704296400000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "c9165f488a9da99f52519ec959cd1cea",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704277530.A.F12.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704277530.A.F12",
+                "article_title": "Re: [請益] 今天投顧老師又要降持股至3成？",
+                "user_id": "Yelich",
+                "content": "痾",
+                "comment_tag": "噓",
+                "date": 1704296400
+            },
+            "sort": [
+                1704296400000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "292a520cd98da8fbece6d590fa0280dd",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "bala045",
+                "content": "買台只能上網的問gpt算不算AI筆電",
+                "comment_tag": "→",
+                "date": 1704296341
+            },
+            "sort": [
+                1704296341000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "974ded99e7d86f62bd0e3c12bb5c79f5",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "bala045",
+                "content": "唬爛",
+                "comment_tag": "推",
+                "date": 1704296340
+            },
+            "sort": [
+                1704296340000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "198b43ab271cd1855eccf9c9377541ea",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "cruisewu2003",
+                "content": "可是 我還不想換AI 筆電 會不會很BI",
+                "comment_tag": "推",
+                "date": 1704296280
+            },
+            "sort": [
+                1704296280000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "5b14acc6cc581bc9b8ed70cb521d3127",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "用美歐日發明的產品，還自稱強國呢，嘻嘻",
+                "comment_tag": "→",
+                "date": 1704296161
+            },
+            "sort": [
+                1704296161000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a196a8ad505ebce76447be3cfe91d02b",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704293549.A.047.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704293549.A.047",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "mopa",
+                "content": "我都45了，連1000萬都沒有",
+                "comment_tag": "推",
+                "date": 1704296160
+            },
+            "sort": [
+                1704296160000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "01810777e447a8278fe18b1308c4b0da",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "製造晶片要用的軟體、化學品、各種機台設備也都是",
+                "comment_tag": "推",
+                "date": 1704296160
+            },
+            "sort": [
+                1704296160000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "0542633cbb8d1f322fa57771bb31fa6e",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "a331330",
+                "content": "不要學A33！去年率先喊700！讓你升級大四房",
+                "comment_tag": "噓",
+                "date": 1704295981
+            },
+            "sort": [
+                1704295981000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "7d636fb881b7d250471fff3bbf3ce639",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "譯器、程式語言都是用美國歐洲發明的產品，笑死人！",
+                "comment_tag": "→",
+                "date": 1704295981
+            },
+            "sort": [
+                1704295981000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a80b28eb1a8a19b93899e905b4cb2bd2",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "NEWinx",
+                "content": "準！TSM又要破百了，對了，向下",
+                "comment_tag": "推",
+                "date": 1704295980
+            },
+            "sort": [
+                1704295980000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "1e58172ff0650007aa7b32a2e6b91f62",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704279256.A.966.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704279256.A.966",
+                "article_title": "[新聞] 上櫃鋰電池廠「天宇工業」 董座涉內線起",
+                "user_id": "kids2224",
+                "content": "有內線真爽，但也不會爽多久",
+                "comment_tag": "推",
+                "date": 1704295980
+            },
+            "sort": [
+                1704295980000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "0e4db8457ee77beb3a8b8a09d0500c82",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "號稱 2025 中國製造結果到現在從各種作業系統到編",
+                "comment_tag": "推",
+                "date": 1704295980
+            },
+            "sort": [
+                1704295980000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "86c225b5fc3239a2944d979f7e9990e5",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "bbignose",
+                "content": "全部賣掉換713都比你窮忙好",
+                "comment_tag": "推",
+                "date": 1704295922
+            },
+            "sort": [
+                1704295922000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a7683c2950f181851a5478d6f2bc32a8",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "davis5566",
+                "content": "但其實正報酬就贏很多人了XD",
+                "comment_tag": "→",
+                "date": 1704295921
+            },
+            "sort": [
+                1704295921000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "27b829b2f27e2a1430f79ef4094e26f0",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295662.A.453.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295662.A.453",
+                "article_title": "[新聞] 1月ETF配息 新光台灣半導體30居同期之冠",
+                "user_id": "cloud3455",
+                "content": "都是過去的事了，過去表現不代表之後積效",
+                "comment_tag": "→",
+                "date": 1704295920
+            },
+            "sort": [
+                1704295920000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "64ec9224dbbb1c93130fba8309f18f01",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "pmes9866",
+                "content": "我第一次聽到也是幹怎麼可能",
+                "comment_tag": "推",
+                "date": 1704295920
+            },
+            "sort": [
+                1704295920000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3e440e19e2ba45d02313992a852fc0a3",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "davis5566",
+                "content": "年報有賠很多的阿 我去年績效也沒到很好",
+                "comment_tag": "推",
+                "date": 1704295920
+            },
+            "sort": [
+                1704295920000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "48c7eb4e481c617888d24a454bfc25a0",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "st06666",
+                "content": "粥大概念股 標的文出來狂漲",
+                "comment_tag": "推",
+                "date": 1704295861
+            },
+            "sort": [
+                1704295861000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "d381e524e488a525772a28bdc71b7cfe",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "KSUGOD",
+                "content": "出貨了",
+                "comment_tag": "推",
+                "date": 1704295860
+            },
+            "sort": [
+                1704295860000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "300fdb18c2a9f6e0c31cfd3c9816e36b",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295662.A.453.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295662.A.453",
+                "article_title": "[新聞] 1月ETF配息 新光台灣半導體30居同期之冠",
+                "user_id": "ej03xu3",
+                "content": "台版費半",
+                "comment_tag": "→",
+                "date": 1704295860
+            },
+            "sort": [
+                1704295860000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "0f3019704428206c9756f6ad88ce1a04",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "Yelich",
+                "content": "反觀",
+                "comment_tag": "噓",
+                "date": 1704295860
+            },
+            "sort": [
+                1704295860000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3eeb867513fe13e1f28381cc60bcf581",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "ryusenming",
+                "content": "很多125就近十萬了QQ",
+                "comment_tag": "→",
+                "date": 1704295803
+            },
+            "sort": [
+                1704295803000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "008195ab9a9f539348c1a3d2981e00e0",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "cl3bp6",
+                "content": "滲透率能多少還是問號",
+                "comment_tag": "→",
+                "date": 1704295802
+            },
+            "sort": [
+                1704295802000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "a4a021c38ae008d7b40c5876e8a2e7ca",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "cl3bp6",
+                "content": "PC以前是掛個電競加價賣 明年開始掛個AI加價賣",
+                "comment_tag": "推",
+                "date": 1704295801
+            },
+            "sort": [
+                1704295801000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "fb37321cc0b6af5221cef3dca7dac593",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294100.A.B55.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294100.A.B55",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "ccdrv",
+                "content": "你是那個苦主嗎",
+                "comment_tag": "推",
+                "date": 1704295800
+            },
+            "sort": [
+                1704295800000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "8de33d19579fe0b9d20b4aa22ef622df",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294468.A.12E.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294468.A.12E",
+                "article_title": "[新聞] 藍天：AI PC換機潮 摩拳擦掌迎商機",
+                "user_id": "ryusenming",
+                "content": "sym今天那台158cc賣十萬 看完滿心動...",
+                "comment_tag": "推",
+                "date": 1704295800
+            },
+            "sort": [
+                1704295800000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "262fe3c658f3e03d8948040a4881b41e",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704266511.A.AD7.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704266511.A.AD7",
+                "article_title": "透視最新中國市值500強： 台積電重奪榜首，美團",
+                "user_id": "nakayamayyt",
+                "content": "不把台GG放進去應該就是這媒體被整肅",
+                "comment_tag": "→",
+                "date": 1704295800
+            },
+            "sort": [
+                1704295800000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "414bde70d717ef9fe1974e557929467a",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704274659.A.E93.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704274659.A.E93",
+                "article_title": "[情報] 2323 中環 取得聯發科普通股",
+                "user_id": "laechan",
+                "content": "他是不是真的以為自己是股神",
+                "comment_tag": "→",
+                "date": 1704295800
+            },
+            "sort": [
+                1704295800000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "df7dd39159fd87ee366be61c29fab319",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "a1237759",
+                "content": "中國又又又又又又又又要倒了！？",
+                "comment_tag": "推",
+                "date": 1704295800
+            },
+            "sort": [
+                1704295800000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "b3fbff8b4ecbbe26df703cef6e99bcf6",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "kelon",
+                "content": "別貪心有賺當加薪看就好",
+                "comment_tag": "推",
+                "date": 1704295800
+            },
+            "sort": [
+                1704295800000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "228d827c8c44c1ad15facda1267adee4",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "且差得遠呢wwww",
+                "comment_tag": "→",
+                "date": 1704295741
+            },
+            "sort": [
+                1704295741000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "1b028ca4ffd399965b4b32131fb5263c",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "ggHan",
+                "content": "就會調整心態了 怎樣都對你有益 不錯吧？",
+                "comment_tag": "→",
+                "date": 1704295741
+            },
+            "sort": [
+                1704295741000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "8d63d06ca90877d7e28b0f61e1fa09ad",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "Enzofulgura",
+                "content": "喊7開頭不知道幾年了 從來沒摸到過",
+                "comment_tag": "→",
+                "date": 1704295740
+            },
+            "sort": [
+                1704295740000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3054165ec41bd6daa4a98dacf931dd88",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704285178.A.6C6.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704285178.A.6C6",
+                "article_title": "[新聞] 韓國《新楓之谷》NEXON涉偷改機率、發",
+                "user_id": "MoDerF",
+                "content": "標榜韓國原廠一樣(偷改)的機率",
+                "comment_tag": "推",
+                "date": 1704295740
+            },
+            "sort": [
+                1704295740000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "ce2ee9741a51ce5cc8482bda850106d4",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704289664.A.909.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704289664.A.909",
+                "article_title": "[新聞] 台股兩天跌掉371點 法人不悲觀、曝買點",
+                "user_id": "Enzofulgura",
+                "content": "法人還沒抽腿 趕快來喊盤抓交替",
+                "comment_tag": "→",
+                "date": 1704295740
+            },
+            "sort": [
+                1704295740000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "156365d1068fded26338eef4b35a615b",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "的出蘋果 iOS, M2 晶片這種等級的產品？完全沒有而",
+                "comment_tag": "→",
+                "date": 1704295740
+            },
+            "sort": [
+                1704295740000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "6ebfaacfa9e7ae9b751f3509dab00958",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "ggHan",
+                "content": "自己做看看 如果賺更多自然就不會羨慕 反之賠錢自然",
+                "comment_tag": "推",
+                "date": 1704295740
+            },
+            "sort": [
+                1704295740000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "62975fad727b6efd08de22de16a6ade7",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "em 高通弄的出來就好 -- 請問中國哪一家企業能開發",
+                "comment_tag": "→",
+                "date": 1704295681
+            },
+            "sort": [
+                1704295681000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "8fddbf7f735b760c4dc63e167d4c24bb",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704294100.A.B55.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704294100.A.B55",
+                "article_title": "Re: [請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "lakershank",
+                "content": "XD",
+                "comment_tag": "推",
+                "date": 1704295680
+            },
+            "sort": [
+                1704295680000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "51e4a3be3dfdd815b06d9d640e9889b4",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290927.A.311.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290927.A.311",
+                "article_title": "[新聞] 拜登對中國再出重手？艾司摩爾ASML部分出",
+                "user_id": "bj45566",
+                "content": "有人又在偷換概念，蘋果又不是強在通訊晶片，5G mod",
+                "comment_tag": "推",
+                "date": 1704295680
+            },
+            "sort": [
+                1704295680000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "553690a7c9aadf7670a7a9a1e1994eaf",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704290965.A.325.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704290965.A.325",
+                "article_title": "[請益] 如何建立好心態不羨慕別人年報？",
+                "user_id": "wateryc",
+                "content": "家裡有礦有房產的表示你們在爭什麼",
+                "comment_tag": "→",
+                "date": 1704295680
+            },
+            "sort": [
+                1704295680000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "0554e4d3fb13694e00dea72d729d2101",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295662.A.453.html",
+                "type": "article",
+                "article_id": "M.1704295662.A.453",
+                "article_title": "[新聞] 1月ETF配息 新光台灣半導體30居同期之冠",
+                "user_id": "natyshow",
+                "user_nickname": "黑犀牛橘子",
+                "board": "Stock",
+                "content": "原文標題：\n\n1月台股ETF配息出爐 新光台灣半導體30居同期之冠\n\n原文連結：\n\nhttps://www.cna.com.tw/news/afe/202401030358.aspx\n\n發布時間：2024/1/3 21:36\n\n記者署名：江明晏\n\n原文內容：\n\n今年首波ETF配息潮來臨，截至1月3日止，1月已公布配息金額的12檔台股ETF中，多達9檔\n拉高1月配息金額，新光台灣半導體30預估年化配息率達9.45%，為同期配息的台股ETF之\n冠。\n\n根據1月3日最新收盤價計算，新光台灣半導體30單次配息率近2.36%，預估年化配息率約\n達9.45%，在1月公布配息金額的12檔台股ETF中，是首檔突破9%的半導體ETF。\n\n新光投信量化投資部協理袁永騰表示，新光台灣半導體30最新公告1月配息金額為0.35元\n，較過去平均每季配息約0.13元，多出近3倍，增加配息金額來源，主要來自過去股息累\n積，讓受益人對首季拉高配息金額有感。\n\n根據證交所統計，截至1月3日止，1月已公布配息金額的12檔台股ETF中，多達9檔拉高1月\n配息金額，其中就有4檔屬於科技型ETF，包括新光台灣半導體30、群益半導體收益、國泰\n台灣5G+以及復華台灣科技優息等，今年1月首波配息金額，均較去年前次配發金額高，除\n新光台灣半導體30的預估年化配息率衝上9%以上最高外，其餘3檔科技型ETF也都有逾8%以\n上的年化配息率表現。\n\n袁永騰指出，這類科技型ETF，雖然最近股價波動較大，但仍看好2024年全球半導體景氣\n重返成長軌道，將帶旺台灣半導體類股業績有望再掀高潮。另外，從過去實際填息天數統\n計，半導體ETF平均填息天數約20.6天、市值型ETF需28.6天，高股息ETF則要30.8天。\n\n元大投信今天也透過新聞稿宣布，「元大台灣高股息優質龍頭基金」2023年含息總報酬達\n50.5%，1月發出的配息包含當月配息及年終配，每單位配發金額為0.5166元，換算年化配\n息率9% ，將於1月15日入帳。\n\n元大投信說明，元大台灣高股息優質龍頭基金自2023年10月起，每單位配息金額上調至\n0.0446元，近3個月平均年化配息率提高至5.1%。\n\n元大投信指出，2023年台股表現優異，台股主動基金至2023年11月底整體規模突破新台幣\n4800億元，重返金融海嘯後新高，元大台灣高股息優質龍頭基金依元大投信官網揭露11月\n底基金主要持股包括台積電、聯詠、聯電、聯發科、廣達等，均為國內指標權值股。\n\n\n心得/評論：\n\n近來挖掘到的一支好ETF\n新光半導體30，純粹靠市值選股\n簡單且粗暴，號稱台版費半\n而且無收益平準金、無收益平準金、無收益平準金\n(很重要所以說三次)\n還能配出高息實在不簡單\n也因為相對低調的緣故吧\n\n無庸置疑，台灣最有競爭力的產業就是半導體\n投資起來真的舒服\n放著配、放著成長都舒服\n\n--\n織田信長、豐臣秀吉、德川家康\n誰最會遲到？\n\n答案：德川家康\n因為「我等德川還不來，我等的人還不明白」\n\n--",
+                "date": 1704295660,
+                "ip": "1.175.44.21"
+            },
+            "sort": [
+                1704295660000
+            ]
+        },
+        {
+            "_index": "article2",
+            "_type": "_doc",
+            "_id": "3fe61f7c568d71719c34aeab2738a388",
+            "_score": null,
+            "_source": {
+                "article_url": "https://www.ptt.cc/bbs/Stock/M.1704295246.A.C1B.html",
+                "type": "comment",
+                "board": "Stock",
+                "article_id": "M.1704295246.A.C1B",
+                "article_title": "[新聞] 雙王法說將登場 外資先升台積電目標價",
+                "user_id": "kevin31a2",
+                "content": "高盛這貨連賣三天了",
+                "comment_tag": "推",
+                "date": 1704295620
+            },
+            "sort": [
+                1704295620000
+            ]
+        }
+    ]
+}
