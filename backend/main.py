@@ -8,7 +8,6 @@ import asyncio
 from db.db_connect import result_collection
 from entity.analyze_body import AnalyzeBody
 
-
 app = FastAPI()
 
 origins = ["*"]
@@ -98,17 +97,16 @@ async def get_result(id: str):
     description="start: 開始的timestamp, end: 結束的timestamp, size: 搜尋幾個(預設10000), page: 第幾頁(預設0), K: TOP K",
 )
 async def get_hot_company_today(
-    start: int,
-    end: int,
-    size: int = 10000,
-    page: int = 0,
-    K: int = 10,
-    news_K: int = 5,
-    news_period: int = 2,
+        start: int,
+        end: int,
+        size: int = 10000,
+        page: int = 0,
+        K: int = 10,
+        news_K: int = 5,
+        news_period: int = 2,
 ):
     fh = Finance_hot_fetcher(K=K, news_K=news_K, news_period=news_period)
     return fh.fetch_hot_company_today(start, end, size, page)
-
 
 # @app.get("/word/cloud/{search_keyword}")
 # async def generate_word_cloud(search_keyword, K: int = 100):
